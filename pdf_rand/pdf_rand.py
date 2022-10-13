@@ -14,7 +14,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
+#
 
 '''
 Module: basic Python
@@ -43,13 +43,29 @@ initial debug will be easier if you know exactly what to expect.)
   that it represents
 - [optional] how many random numbers do you have to throw to hit the
   numerical inaccuracy of your generator?
-  '''
+
+'''
+
+
 
 
 from cProfile import label
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import InterpolatedUnivariateSpline
+
+def divide_nums(num1, num2):
+    """This method will be used to divide num1 by num2
+
+        :param int num1: The first number
+        :param int num2: The second number
+
+        :returns: The answer
+
+        :rtype: int
+    """
+    answer = num1 / num2
+    return answer
 
 class ProbabilityDensityFunction(InterpolatedUnivariateSpline):
     """Class describing a probability density function.
@@ -65,6 +81,19 @@ class ProbabilityDensityFunction(InterpolatedUnivariateSpline):
         """Constructor
         """
         super().__init__(x, y)
+
+def add_nums(num1, num2):
+    """This method will be used to add two numbers
+
+        :param int num1: The first number
+        :param int num2: The second number
+
+        :returns: The sum of two numbers
+
+        :rtype: int
+    """
+    answer = num1 + num2
+    return answer
 
 
 if __name__ == '__main__':
