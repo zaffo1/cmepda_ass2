@@ -47,12 +47,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#pdf_rand.pdf.ProbabilityDensityFunction"><code class="docutils literal notranslate"><span class="pre">ProbabilityDensityFunction</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-pdf_rand.pdf_rand_old">pdf_rand.pdf_rand_old module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pdf_rand.pdf_rand_old.ProbabilityDensityFunction"><code class="docutils literal notranslate"><span class="pre">ProbabilityDensityFunction</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pdf_rand.pdf_rand_old.add_nums"><code class="docutils literal notranslate"><span class="pre">add_nums()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pdf_rand.pdf_rand_old.divide_nums"><code class="docutils literal notranslate"><span class="pre">divide_nums()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pdf_rand">Module contents</a></li>
 </ul>
 </li>
@@ -123,85 +117,6 @@ between x1 and x2.
 :type size: int</p>
 </dd></dl>
 
-</dd></dl>
-
-</section>
-<section id="module-pdf_rand.pdf_rand_old">
-<span id="pdf-rand-pdf-rand-old-module"></span><h2>pdf_rand.pdf_rand_old module<a class="headerlink" href="#module-pdf_rand.pdf_rand_old" title="Permalink to this heading"></a></h2>
-<p>Module: basic Python
-Assignment #4 (October 7, 2021)</p>
-<p>— Goal
-Create a ProbabilityDensityFunction class that is capable of throwing
-preudo-random number with an arbitrary distribution.</p>
-<p>(In practice, start with something easy, like a triangular distribution—the
-initial debug will be easier if you know exactly what to expect.)</p>
-<p>— Specifications
-- the signature of the constructor should be __init__(self, x, y), where</p>
-<blockquote>
-<div><p>x and y are two numpy arrays sampling the pdf on a grid of values, that
-you will use to build a spline</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>[optional] add more arguments to the constructor to control the creation
-of the spline (e.g., its order)</p></li>
-<li><p>the class should be able to evaluate itself on a generic point or array of
-points</p></li>
-<li><p>the class should be able to calculate the probability for the random
-variable to be included in a generic interval</p></li>
-<li><p>the class should be able to throw random numbers according to the distribution
-that it represents</p></li>
-<li><p>[optional] how many random numbers do you have to throw to hit the
-numerical inaccuracy of your generator?</p></li>
-</ul>
-<dl class="py class">
-<dt class="sig sig-object py" id="pdf_rand.pdf_rand_old.ProbabilityDensityFunction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pdf_rand.pdf_rand_old.</span></span><span class="sig-name descname"><span class="pre">ProbabilityDensityFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_rand/pdf_rand_old.html#ProbabilityDensityFunction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_rand.pdf_rand_old.ProbabilityDensityFunction" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">InterpolatedUnivariateSpline</span></code></p>
-<p>Class describing a probability density function.
-:param x: The array of x values to be passed to the pdf.
-:type x: array-like
-:param y: The array of y values to be passed to the pdf.
-:type y: array-like</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pdf_rand.pdf_rand_old.add_nums">
-<span class="sig-prename descclassname"><span class="pre">pdf_rand.pdf_rand_old.</span></span><span class="sig-name descname"><span class="pre">add_nums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_rand/pdf_rand_old.html#add_nums"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_rand.pdf_rand_old.add_nums" title="Permalink to this definition"></a></dt>
-<dd><p>This method will be used to add two numbers</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>num1</strong> (<em>int</em>) – The first number</p></li>
-<li><p><strong>num2</strong> (<em>int</em>) – The second number</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The sum of two numbers</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pdf_rand.pdf_rand_old.divide_nums">
-<span class="sig-prename descclassname"><span class="pre">pdf_rand.pdf_rand_old.</span></span><span class="sig-name descname"><span class="pre">divide_nums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_rand/pdf_rand_old.html#divide_nums"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_rand.pdf_rand_old.divide_nums" title="Permalink to this definition"></a></dt>
-<dd><p>This method will be used to divide num1 by num2</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>num1</strong> (<em>int</em>) – The first number</p></li>
-<li><p><strong>num2</strong> (<em>int</em>) – The second number</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The answer</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
 </dd></dl>
 
 </section>
