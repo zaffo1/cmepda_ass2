@@ -94,6 +94,38 @@
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
 
 
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Module: basic Python</span>
+<span class="sd">Assignment #4 (October 7, 2021)</span>
+
+
+<span class="sd">--- Goal</span>
+<span class="sd">Create a ProbabilityDensityFunction class that is capable of throwing</span>
+<span class="sd">preudo-random number with an arbitrary distribution.</span>
+
+<span class="sd">(In practice, start with something easy, like a triangular distribution---the</span>
+<span class="sd">initial debug will be easier if you know exactly what to expect.)</span>
+
+
+<span class="sd">--- Specifications</span>
+<span class="sd">- the signature of the constructor should be __init__(self, x, y), where</span>
+<span class="sd">  x and y are two numpy arrays sampling the pdf on a grid of values, that</span>
+<span class="sd">  you will use to build a spline</span>
+<span class="sd">- [optional] add more arguments to the constructor to control the creation</span>
+<span class="sd">  of the spline (e.g., its order)</span>
+<span class="sd">- the class should be able to evaluate itself on a generic point or array of</span>
+<span class="sd">  points</span>
+<span class="sd">- the class should be able to calculate the probability for the random</span>
+<span class="sd">  variable to be included in a generic interval</span>
+<span class="sd">- the class should be able to throw random numbers according to the distribution</span>
+<span class="sd">  that it represents</span>
+<span class="sd">- [optional] how many random numbers do you have to throw to hit the</span>
+<span class="sd">  numerical inaccuracy of your generator?</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+
+
+
 
 <div class="viewcode-block" id="ProbabilityDensityFunction"><a class="viewcode-back" href="../../pdf_rand.html#pdf_rand.pdf.ProbabilityDensityFunction">[docs]</a><span class="k">class</span> <span class="nc">ProbabilityDensityFunction</span><span class="p">(</span><span class="n">InterpolatedUnivariateSpline</span><span class="p">):</span>
 
