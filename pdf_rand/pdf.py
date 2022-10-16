@@ -1,7 +1,7 @@
 
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2019 Luca Baldini (luca.baldini@pi.infn.it)
+# Copyright (C) 2019 Lorenzo Zaffina (l.zaffina@studenti.unipi.it)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
