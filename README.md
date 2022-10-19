@@ -1,5 +1,6 @@
 # Second Assignment for the CMEPDA course
 
-Objective:
-Create a ProbabilityDensityFunction class that is capable of throwing
-preudo-random number with an arbitrary distribution.
+[![Documentation Status](https://readthedocs.org/projects/zaffo1-cmepda-ass2/badge/?version=latest)](https://zaffo1-cmepda-ass2.readthedocs.io/en/latest/?badge=latest)
+
+
+Spline-based univariate pseudo-random number generator
